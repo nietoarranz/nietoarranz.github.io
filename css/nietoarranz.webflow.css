@@ -1428,6 +1428,7 @@ img {
 
   .column-center {
     display: block;
+    height: 100%;
     padding-right: 20px;
     padding-left: 20px;
     -webkit-box-align: start;
@@ -1437,8 +1438,13 @@ img {
   }
 
   .div-section {
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 250px;
+    padding-bottom: 140px;
+  }
+
+  .div-section.div-contact {
+    padding-top: 250px;
+    padding-bottom: 220px;
   }
 
   .image-3 {
@@ -1448,7 +1454,19 @@ img {
 
   .txt-title-section {
     margin-left: 40px;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
     font-size: 42px;
+    text-align: left;
+  }
+
+  .txt-title-section.work {
+    padding-bottom: 20px;
+  }
+
+  .div-timeline {
+    margin-top: 140px;
   }
 
   .txt-tm-right {
@@ -1476,11 +1494,16 @@ img {
   }
 
   .columns-2 {
+    margin-top: 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .div-contact {
+    padding-top: 40px;
   }
 
   .text-block-8 {
@@ -1494,7 +1517,7 @@ img {
 
   .image-5 {
     width: 75px;
-    height: 175px;
+    height: 225px;
   }
 
   .link-2 {
@@ -1524,10 +1547,29 @@ img {
     object-position: 50% 100%;
   }
 
-  .div-cover-project.problem {
+  .div-cover-project {
     height: auto;
-    padding-top: 140px;
+    margin-top: 140px;
+    margin-bottom: 140px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .div-cover-project.problem {
+    margin-top: 0px;
+    padding-top: 250px;
     padding-bottom: 140px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
   .column-ficha {
