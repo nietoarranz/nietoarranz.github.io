@@ -1653,6 +1653,10 @@ img {
     margin-bottom: 20px;
   }
 
+  .hover-line.casemobile {
+    margin-bottom: 100px;
+  }
+
   .screen-alone {
     padding-right: 0px;
     padding-left: 0px;
