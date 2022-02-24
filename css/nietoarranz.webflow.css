@@ -491,6 +491,8 @@ img {
   margin-left: 10px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  width: 75px;
+  height: 134px;
 }
 
 .text-span-6 {
