@@ -11,6 +11,7 @@
   --_my-variables---borders: #d0cfcf;
   --_my-variables---background: #f5f5f4;
   --_my-variables---padding: 25px;
+  --_my-variables---padding-mobile: 15px;
   --_my-variables---text-secondary: #757575;
 }
 
@@ -35,7 +36,8 @@ li {
   justify-content: flex-end;
   align-items: flex-start;
   width: auto;
-  height: 350px;
+  height: 50%;
+  min-height: 350px;
   display: flex;
 }
 
@@ -44,7 +46,7 @@ li {
   height: 60vh;
 }
 
-.header-spacer.header-start {
+.header-spacer.header-start, .header-spacer.header-home {
   height: 350px;
 }
 
@@ -111,7 +113,7 @@ li {
   border-bottom: 1px solid var(--_my-variables---borders);
   flex-flow: column;
   flex: 1;
-  min-height: 500px;
+  min-height: 200px;
   display: flex;
 }
 
@@ -412,6 +414,10 @@ li {
   display: flex;
 }
 
+.start-container-row.start-container-row-mobile {
+  display: none;
+}
+
 .start-cointainer-hover {
   cursor: help;
   height: auto;
@@ -531,6 +537,7 @@ li {
 
 .project-text {
   color: var(--_my-variables---text-secondary);
+  text-align: right;
   font-family: Tabular Variable, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.4;
@@ -778,14 +785,39 @@ li {
 }
 
 @media screen and (max-width: 991px) {
+  .header-title {
+    font-size: 96px;
+  }
+
+  .topbar {
+    padding: var(--_my-variables---padding-mobile);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .text-block-2, .text-block-3, .text-block-4 {
+    font-size: 10px;
+  }
+
+  .div-block-4 {
+    display: none;
+  }
+
   .text-content-big {
-    font-size: 30px;
+    flex-flow: row;
+    font-size: 22px;
+    display: flex;
+  }
+
+  .header-sticky {
+    top: 50px;
   }
 
   .story-titles {
     flex: 1;
     min-height: 150px;
     display: flex;
+    top: 177px;
   }
 
   .story-titles-links {
@@ -798,6 +830,10 @@ li {
     writing-mode: sideways-lr;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  .story-text {
+    padding-right: var(--_my-variables---padding);
   }
 
   .story-text-year {
@@ -838,6 +874,26 @@ li {
     font-size: 18px;
   }
 
+  .start-scroll {
+    padding: var(--_my-variables---padding-mobile);
+  }
+
+  .link-secondary {
+    font-size: 16px;
+  }
+
+  .start-container-row {
+    max-height: 31px;
+  }
+
+  .start-container-row.start-container-row-hover {
+    display: none;
+  }
+
+  .start-container-row.start-container-row-mobile {
+    display: block;
+  }
+
   .start-cointainer-hover {
     height: 42px;
   }
@@ -868,12 +924,16 @@ li {
     height: 100svh;
     font-family: Tabular Variable, Arial, sans-serif;
     font-weight: 400;
-    display: flex;
+    display: none;
     position: fixed;
   }
 
   .image-2 {
     width: 50px;
+  }
+
+  .image-3 {
+    max-width: 75%;
   }
 }
 
@@ -889,6 +949,7 @@ li {
 
   .work-entry {
     flex-flow: column;
+    margin-top: 100px;
   }
 
   .work-photo {
@@ -902,6 +963,73 @@ li {
 
   .work-company {
     margin-top: 60px;
+  }
+
+  .div-block-8 {
+    flex-flow: column;
+  }
+
+  .summary-text {
+    border-bottom: 1px solid var(--_my-variables---borders);
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .brief-content {
+    flex-flow: column;
+  }
+
+  .brief-text-container.border-right {
+    border-bottom: 1px solid var(--_my-variables---borders);
+    border-radius: 0;
+  }
+
+  .process-text-container {
+    border-bottom: 1px solid var(--_my-variables---borders);
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .process-content, .outcome-section-row {
+    flex-flow: column;
+  }
+
+  .outcome-section-row-side.border-right {
+    border-bottom: 1px solid var(--_my-variables---borders);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header-title {
+    font-size: 64px;
+  }
+
+  .topbar {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .text-content-big {
+    font-size: 16px;
+  }
+
+  .story-titles, .story-points {
+    display: none;
+  }
+
+  .link-secondary {
+    text-align: center;
+  }
+
+  .start-container-row {
+    flex: 1;
+    display: block;
+  }
+
+  .start-container-row.start-container-row-mobile {
+    flex-flow: row;
+    flex: 1;
+    display: block;
   }
 }
 
